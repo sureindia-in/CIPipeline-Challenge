@@ -29,10 +29,6 @@ pipeline{
             }
         }
         }
-     stage("Build & SonarQube analysis") {
-            agent any
-            steps {
-               script{
 
     }
     post {  

@@ -35,7 +35,7 @@ pipeline{
                      script{
                           last_started=env.STAGE_NAME
                   }
-                    withSonarQubeEnv('sonar-CI') {
+                    withSonarQubeEnv('sonar-CI-challenge') {
 
                       sh 'java -version'
                       sh 'mvn clean package sonar:sonar'

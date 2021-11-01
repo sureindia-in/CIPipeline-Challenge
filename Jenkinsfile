@@ -53,7 +53,7 @@ pipeline{
            "files" :[
            {
            "pattern":"target/*.jar",
-           "target":"dev-maven-local-CIChallenge"
+           "target":"dev-maven-local"
            }
            ]
          }''',

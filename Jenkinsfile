@@ -42,6 +42,26 @@ pipeline{
                     }
                   }
                 }
+     stage('Deploy to artifactory'){
+        steps{
+           script{
+              last_started=env.STAGE_NAME
+            }
+        rtUpload(
+         serverId : 'artifactory-name',
+         spec :'''{
+           "files" :[
+           {
+           "pattern":"target/*.jar",
+           "target":"dev-maven-local-CIChallenge"
+           }
+           ]
+         }''',
+         
+      )
+      }
+     }
+
     }
     post {  
          always {  
